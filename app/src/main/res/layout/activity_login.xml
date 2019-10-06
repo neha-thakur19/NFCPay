@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:livebutton="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_texture"
+    tools:context="com.the43appmart.nfc.example.Login">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/RELlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp">
+
+
+
+            <ImageView
+                android:id="@+id/imgLogin"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@mipmap/logo_icon_nfc" />
+
+            <TextView
+                android:id="@+id/TextLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgLogin"
+                android:layout_centerHorizontal="true"
+                android:text="NFC Login"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edtUser"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TextLogin"
+                android:layout_centerHorizontal="true"
+
+                >
+
+                <EditText
+                    android:id="@+id/edtUsername"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint=" E-Mail id "
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorPrimary" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edtPassword12"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtUser"
+                android:layout_centerHorizontal="true">
+
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:hint="  Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorPrimary" />
+            </android.support.design.widget.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cbShowpass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/edtPassword12"
+                android:text="Show Password"
+                android:textColor="@color/colorPrimary" />
+
+
+
+            <ru.katso.livebutton.LiveButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/cbShowpass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="20dp"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                livebutton:backgroundColor="@color/colorPrimary"
+                livebutton:corners="8dp"
+                livebutton:normalHeight="4dp"
+                livebutton:pressedHeight="1dp"
+                livebutton:shadowColor="#37de00" />
+
+            <TextView
+                android:id="@+id/txtSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/btnLogin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="NEW USER TAP HERE "
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
